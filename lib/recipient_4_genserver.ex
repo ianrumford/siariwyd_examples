@@ -5,5 +5,6 @@ defmodule Recipient4GenServer do
   defdelegate donor_c_genserver_state_put(pid, new_state), to: DonorCGenServer
   # handle_call functions
   defdelegate handle_call(pid, fromref, state), to: DonorBGenServer
+  # this will be ignored but compiler will warn
   defdelegate handle_call(pid, fromref, state), to: DonorCGenServer
 end

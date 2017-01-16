@@ -1,24 +1,24 @@
 defmodule SiariwydExamples.Mixfile do
   use Mix.Project
 
-  @version "0.0.1"
+  @version "0.0.2"
 
   def project do
     [app: :siariwyd_examples,
      version: @version,
-     elixir: "~> 1.3",
-     description: description,
-     package: package,
+     elixir: "~> 1.4",
+     description: description(),
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps()]
   end
   def application do
     [applications: [:logger]]
   end
   defp deps do
     [
-      {:siariwyd, ">= 0.1.0"},
+      {:siariwyd, ">= 0.2.0"},
     ]
   end
   defp package do
